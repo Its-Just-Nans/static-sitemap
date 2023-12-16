@@ -1,0 +1,5 @@
+__pycache__/
+static_sitemap.egg-info/
+dist/
+
+sitemap.xml

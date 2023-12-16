@@ -1,9 +1,12 @@
-# Sitemap
+# static-sitemap
 
 ## How to use
 
 ```sh
-python indexer.py
+# install
+python -m pip install static_sitemap
+
+python -m static_sitemap https://its-just-nans.github.io/
 ```
 
 ## Options
