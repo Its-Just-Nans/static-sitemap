@@ -1,5 +1,9 @@
 # static-sitemap
 
+- [PyPi page](https://pypi.org/project/static-sitemap/)
+- [PyPiStats](https://pypistats.org/packages/static-sitemap)
+- [GitHub repo](https://github.com/Its-Just-Nans/static-sitemap)
+
 ## How to use
 
 ```sh
