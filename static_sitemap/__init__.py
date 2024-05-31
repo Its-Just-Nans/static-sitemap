@@ -132,8 +132,6 @@ def main():
         disp("Finished Exploring", "\n")
 
     if globalVar["sitemap"]:
-        date = datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ")
-        f = open("sitemap.xml", "w", encoding="utf-8")
         string_to_add = ""
         string_to_add += '<?xml version="1.0" encoding="UTF-8"?>' + "\n"
         string_to_add += (
@@ -142,15 +140,13 @@ def main():
         )
         for one_link in in_domain:
             string_to_add += "    <url>\n"
-            string_to_add += "        <loc>\n"
-            string_to_add += f"{' '*12}{one_link}\n"
-            string_to_add += "        </loc>\n"
-            string_to_add += f"{' '*8}<lastmod>{date}</lastmod>\n"
+            string_to_add += f"{' '*8}<loc>{one_link}</loc>\n"
             string_to_add += f"{' '*8}<changefreq>weekly</changefreq>\n"
+            string_to_add += f"{' '*8}<priority>0.5</priority>\n"
             string_to_add += "    </url>\n"
         string_to_add += "</urlset>"
-        f.write(string_to_add)
-        f.close()
+        with open("sitemap.xml", "w", encoding="utf-8") as f:
+            f.write(string_to_add)
 
     disp(">>> Internal : ", "")
     disp(len(in_domain), "\n")
