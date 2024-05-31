@@ -1,10 +1,15 @@
-""" static sitemap generator"""
+"""static sitemap generator"""
+
 from sys import argv
 from re import findall
 from urllib.parse import urlparse
 from datetime import datetime
 from requests import get
 
+NEWS = 'xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"'
+XHTML = ' xmlns:xhtml="http://www.w3.org/1999/xhtml"'
+IMAGE = 'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"'
+VIDEO = 'xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"'
 
 in_domain = []
 ext = []
@@ -132,7 +137,8 @@ def main():
         string_to_add = ""
         string_to_add += '<?xml version="1.0" encoding="UTF-8"?>' + "\n"
         string_to_add += (
-            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "\n"
+            f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" {NEWS} {XHTML} {IMAGE} {VIDEO}>'
+            + "\n"
         )
         for one_link in in_domain:
             string_to_add += "    <url>\n"
