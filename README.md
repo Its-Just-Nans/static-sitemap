@@ -1,4 +1,4 @@
-# static-sitemap
+# static-sitemap [![pypi version](https://img.shields.io/pypi/v/static-sitemap)](https://pypi.org/project/static-sitemap/) ![pypi downloads](https://img.shields.io/pypi/dm/static-sitemap)
 
 - [PyPi page](https://pypi.org/project/static-sitemap/)
 - [PyPiStats](https://pypistats.org/packages/static-sitemap)
