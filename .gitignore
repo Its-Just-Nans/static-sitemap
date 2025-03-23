@@ -3,3 +3,4 @@ static_sitemap.egg-info/
 dist/
 
 sitemap.xml
+.vscode/
