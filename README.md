@@ -8,7 +8,7 @@
 
 ```sh
 # install
-python -m pip install static_sitemap
+python -m pip install --upgrade static_sitemap
 
 python -m static_sitemap https://its-just-nans.github.io/
 ```
