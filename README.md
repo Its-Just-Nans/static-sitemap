@@ -20,7 +20,3 @@ python -m static_sitemap https://its-just-nans.github.io/
 - `--sitemap` : Create a `sitemap.xml` file
 - `--rm-error` : Delete link with request error
 - `--html` : to display the html from requests
-
-## Others files
-
-- `other.html` is useless
