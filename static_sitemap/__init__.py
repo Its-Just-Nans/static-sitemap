@@ -5,7 +5,7 @@ from .lib import (
     explore_url,
     disp_results,
     write_sitemap,
-    parse_args,
+    parse_args,  # noqa: F401
     should_check_file,
 )
 
@@ -19,7 +19,6 @@ def main(base_url, global_vars):
     href_out_domain = set()
     href_mail = set()
     href_phone = set()
-    parse_args()
     domain_name = base_url.split("/")
     while len(domain_name) > 3:
         domain_name.pop()
@@ -49,11 +48,13 @@ def main(base_url, global_vars):
 
     except KeyboardInterrupt:
         pass
-    except Exception as _exception:
-        pass
+    except Exception as e:
+        print(f"Error {e}")
 
     if not global_vars["quiet"]:
         disp("Finished Exploring", "\n")
+
+    href_in_domain = sorted(href_in_domain)
 
     if global_vars["sitemap"]:
         write_sitemap(href_in_domain)

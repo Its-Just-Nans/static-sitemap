@@ -94,6 +94,7 @@ def explore_url(url, domain_name, global_vars):
 
 
 def disp_results(global_vars, res):
+    """Dispay stats of result"""
     disp = get_displayer(global_vars)
     for one_res_key, values in res.items():
         disp(f">>> {one_res_key} : ")

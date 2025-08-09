@@ -14,6 +14,10 @@ python3 -m twine upload dist/* --verbose
 # enter token
 ```
 
+## 2025-08-09
+
+- Sort links
+
 ## 2025-03-23
 
 - rewrite the lib with cleaner functions
